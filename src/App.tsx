@@ -10,8 +10,8 @@ function App() {
         <Header />
         <main>
           <Routes>
-            <Route path='/' element={<CardListContainer />} />
-            <Route path='/grid' element={<CardGridContainer />} />
+            <Route path='/react-drag' element={<CardListContainer />} />
+            <Route path='/react-drag/grid' element={<CardGridContainer />} />
           </Routes>
         </main>
       </BrowserRouter>

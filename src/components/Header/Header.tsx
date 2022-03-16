@@ -8,10 +8,10 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
   const { pathname } = useLocation();
   return (
     <header className='header'>
-      <Link className={pathname === '/' ? 'selected' : ''} to='/'>
+      <Link className={pathname === '/react-drag' ? 'selected' : ''} to='/react-drag'>
         List
       </Link>
-      <Link className={pathname === '/grid' ? 'selected' : ''} to='/grid'>
+      <Link className={pathname === '/react-drag/grid' ? 'selected' : ''} to='/react-drag/grid'>
         Grid
       </Link>
     </header>

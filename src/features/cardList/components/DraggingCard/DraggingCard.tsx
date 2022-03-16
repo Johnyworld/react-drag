@@ -40,6 +40,7 @@ const DraggingCard: React.FC<DraggingCardProps> = ({ children, grabItem, listLen
       {grabItem && dragPos && (
         <div className='dragging-card'>
           <Card
+            data={grabItem.data}
             style={{
               position: 'absolute',
               top: grabItem.y + dragPos.y,
@@ -47,9 +48,7 @@ const DraggingCard: React.FC<DraggingCardProps> = ({ children, grabItem, listLen
               width: grabItem.width,
               height: grabItem.height,
             }}
-          >
-            {grabItem.data.title}
-          </Card>
+          />
         </div>
       )}
     </div>

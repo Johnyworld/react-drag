@@ -67,14 +67,13 @@ const CardList: React.FC<CardListProps> = ({ list, onMove }) => {
 
           return (
             <Card
+              data={item}
               key={item.index}
               style={grabItem ? { transition: 'transform 0.3s' } : undefined}
               className={isMoving ? `card--${absolutePos}` : ''}
               isGrab={grabItem?.data.id === item.id}
               onMouseDown={handleGrab(item)}
-            >
-              {item.title}
-            </Card>
+            />
           );
         })}
       </div>

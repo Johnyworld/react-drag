@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CardItem } from 'types';
-import { cards } from '../features/cards/cards.fixture';
+import CardsContext from './cards.context';
+import { cards } from './cards.fixture';
 
 const getNewIndex = (from: number, to: number, index: number) => {
   // from이 to보다 작으면 to보다 같거나 작고 from보다 큰 index들은 -1
@@ -14,7 +15,7 @@ const getNewIndex = (from: number, to: number, index: number) => {
   } else return index;
 };
 
-const useMoveItem = () => {
+const CardsProvider: React.FC = ({ children }) => {
   const [list, setList] = useState<CardItem[]>(cards);
   const onDrop = (from: number, to: number) => {
     setList(
@@ -25,7 +26,7 @@ const useMoveItem = () => {
         .sort((a, b) => (a.index < b.index ? -1 : 1))
     );
   };
-  return { list, onDrop };
+  return <CardsContext.Provider value={{ list, onDrop }}>{children}</CardsContext.Provider>;
 };
 
-export default useMoveItem;
+export default CardsProvider;

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import CardGridContainer from './features/cardGrid/cardGrid.container';
 import CardListContainer from './features/cardList/cardList.container';
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='App'>
       <CardsProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Header />
           <main>
             <Routes>
@@ -17,7 +17,7 @@ function App() {
               <Route path={routes.grid} element={<CardGridContainer />} />
             </Routes>
           </main>
-        </BrowserRouter>
+        </HashRouter>
       </CardsProvider>
     </div>
   );

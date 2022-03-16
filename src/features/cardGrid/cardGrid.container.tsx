@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CardItem } from 'types';
 import { cards } from '../cards/cards.fixture';
-import CardList from './components/CardList/CardList';
+import CardGrid from './components/CardGrid';
 
 const getNewIndex = (from: number, to: number, index: number) => {
   // from이 to보다 작으면 to보다 같거나 작고 from보다 큰 index들은 -1
@@ -15,9 +15,8 @@ const getNewIndex = (from: number, to: number, index: number) => {
   } else return index;
 };
 
-const CardListContainer: React.FC = () => {
+const CardGridContainer: React.FC = () => {
   const [list, setList] = useState<CardItem[]>(cards);
-
   const handleMove = (from: number, to: number) => {
     setList(
       list
@@ -27,8 +26,7 @@ const CardListContainer: React.FC = () => {
         .sort((a, b) => (a.index < b.index ? -1 : 1))
     );
   };
-
-  return <CardList list={list} onMove={handleMove} />;
+  return <CardGrid list={list} onMove={handleMove} />;
 };
 
-export default CardListContainer;
+export default CardGridContainer;

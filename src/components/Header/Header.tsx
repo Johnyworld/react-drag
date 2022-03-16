@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import routes, { getWashedPathname } from '../../routes';
 import './Header.scss';
 
-export interface HeaderProps {}
-
-const Header: React.FC<HeaderProps> = ({ children }) => {
+const Header: React.FC = () => {
   const { pathname } = useLocation();
+  const path = getWashedPathname(pathname).split('/')[1];
   return (
     <header className='header'>
-      <Link className={pathname === '/react-drag' ? 'selected' : ''} to='/react-drag'>
+      <Link className={path === '' ? 'selected' : ''} to={routes.root}>
         List
       </Link>
-      <Link className={pathname === '/react-drag/grid' ? 'selected' : ''} to='/react-drag/grid'>
+      <Link className={path === 'grid' ? 'selected' : ''} to={routes.grid}>
         Grid
       </Link>
     </header>

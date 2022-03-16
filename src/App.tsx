@@ -3,6 +3,7 @@ import Header from './components/Header';
 import CardGridContainer from './features/cardGrid/cardGrid.container';
 import CardListContainer from './features/cardList/cardList.container';
 import CardsProvider from './features/cards/cards.provider';
+import routes from './routes';
 
 function App() {
   return (
@@ -12,8 +13,8 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path='/react-drag' element={<CardListContainer />} />
-              <Route path='/react-drag/grid' element={<CardGridContainer />} />
+              <Route path={routes.root} element={<CardListContainer />} />
+              <Route path={routes.grid} element={<CardGridContainer />} />
             </Routes>
           </main>
         </BrowserRouter>

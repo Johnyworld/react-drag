@@ -32,7 +32,7 @@ const DraggingCard: React.FC<DraggingCardProps> = ({ children, grabItem, listLen
       const actualMovIndexX = movIndexX < 0 ? 0 : movIndexX > COLUMN - 1 ? COLUMN - 1 : movIndexX;
       const actualMovIndexY = movIndexY < 0 ? 0 : movIndexY > yMaxLen ? yMaxLen : movIndexY;
       const movIndex = actualMovIndexX + actualMovIndexY * COLUMN;
-      setIdx(movIndex);
+      setIdx(movIndex < 0 ? 0 : movIndex > listLength - 1 ? listLength - 1 : movIndex);
       setDragPos({ x, y });
     },
     [grabItem, listLength]

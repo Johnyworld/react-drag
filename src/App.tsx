@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import CardListContainer from './features/cardList/containers/CardListContainer';
+import CardListContainer from './features/cardList/cardList.container';
 
 function App() {
   return (
@@ -10,7 +10,6 @@ function App() {
         <main>
           <Routes>
             <Route path='/' element={<CardListContainer />} />
-            <Route path='/grid' element={<p>grid</p>} />
           </Routes>
         </main>
       </BrowserRouter>

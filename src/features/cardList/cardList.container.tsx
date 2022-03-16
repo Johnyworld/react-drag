@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CardItem } from 'types';
-import CardList from '../../components/CardList/CardList';
+import CardList from './components/CardList/CardList';
 
 const getNewIndex = (from: number, to: number, index: number) => {
   // from이 to보다 작으면 to보다 같거나 작고 from보다 큰 index들은 -1

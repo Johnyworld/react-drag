@@ -10,7 +10,7 @@ export interface CardProps {
   onMouseDown?: React.MouseEventHandler<HTMLDivElement>;
 }
 
-const Card: React.FC<CardProps> = ({ data, isGrab, className, style, children, onMouseDown }) => {
+const Card: React.FC<CardProps> = ({ data, isGrab, className, style, onMouseDown }) => {
   const { title, emogi } = data;
   return (
     <div style={style} onMouseDown={onMouseDown} className={'card ' + className + (isGrab ? ' card--grab' : '')}>

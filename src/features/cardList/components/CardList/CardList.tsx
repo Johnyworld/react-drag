@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { CardItem, GrabItem } from 'types';
-import Card from '../../../../components/Card';
+import Card from '../Card';
 import DraggingCard from '../DraggingCard';
 import './CardList.scss';
 

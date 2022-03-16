@@ -54,6 +54,7 @@ const DraggingCard: React.FC<DraggingCardProps> = ({ children, grabItem, listLen
             style={{
               top: grabItem.y + dragPos.y + 'px',
               left: grabItem.x + dragPos.x + 'px',
+              cursor: 'grabbing',
             }}
           />
         </div>

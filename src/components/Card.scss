@@ -1,0 +1,30 @@
+.card {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  height: 50px;
+  font-size: 14px;
+  transform: translateY(0);
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &--grab {
+    visibility: hidden;
+  }
+
+  &--up {
+    transform: translateY(-54px);
+  }
+
+  &--down {
+    transform: translateY(54px);
+  }
+}

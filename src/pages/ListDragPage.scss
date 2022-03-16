@@ -1,0 +1,10 @@
+.list-drag-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .card-list {
+    width: 500px;
+  }
+}

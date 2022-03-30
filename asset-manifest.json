@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-drag/static/css/main.2240310a.css",
-    "main.js": "/react-drag/static/js/main.08d580dc.js",
-    "static/js/787.8889b56a.chunk.js": "/react-drag/static/js/787.8889b56a.chunk.js",
-    "index.html": "/react-drag/index.html",
-    "main.2240310a.css.map": "/react-drag/static/css/main.2240310a.css.map",
-    "main.08d580dc.js.map": "/react-drag/static/js/main.08d580dc.js.map",
-    "787.8889b56a.chunk.js.map": "/react-drag/static/js/787.8889b56a.chunk.js.map"
+    "main.css": "/react-ui-playground/static/css/main.2240310a.css",
+    "main.js": "/react-ui-playground/static/js/main.71020204.js",
+    "static/js/787.7023c8ad.chunk.js": "/react-ui-playground/static/js/787.7023c8ad.chunk.js",
+    "index.html": "/react-ui-playground/index.html",
+    "main.2240310a.css.map": "/react-ui-playground/static/css/main.2240310a.css.map",
+    "main.71020204.js.map": "/react-ui-playground/static/js/main.71020204.js.map",
+    "787.7023c8ad.chunk.js.map": "/react-ui-playground/static/js/787.7023c8ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2240310a.css",
-    "static/js/main.08d580dc.js"
+    "static/js/main.71020204.js"
   ]
 }

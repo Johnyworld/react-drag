@@ -1,6 +1,5 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import CardGridContainer from './features/cardGrid/cardGrid.container';
 import CardListContainer from './features/cardList/cardList.container';
 import CardsProvider from './features/cards/cards.provider';
 import routes from './routes';
@@ -13,8 +12,10 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path={routes.root} element={<CardListContainer />} />
-              <Route path={routes.grid} element={<CardGridContainer />} />
+              <Route path='/' element={<CardListContainer />} />
+              {routes.map(data => (
+                <Route key={data.id} path={data.path} element={<data.component />} />
+              ))}
             </Routes>
           </main>
         </HashRouter>

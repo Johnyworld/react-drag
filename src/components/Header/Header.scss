@@ -6,14 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-
-  a {
-    text-decoration: none;
-    color: black;
-    &.selected {
-      text-decoration: underline;
-      font-weight: bold;
-    }
-  }
+  background-color: white;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
 }

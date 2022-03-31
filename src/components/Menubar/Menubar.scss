@@ -1,0 +1,28 @@
+.menubar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+
+  &__item {
+    list-style-type: none;
+    font-size: 14px;
+  }
+
+  &__anchor {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 6px 12px;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: #eee;
+    }
+
+    &--selected {
+      color: #222;
+      font-weight: bold;
+    }
+  }
+}

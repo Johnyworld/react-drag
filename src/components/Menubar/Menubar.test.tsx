@@ -28,6 +28,9 @@ test('리스트 아이템을 모두 렌더 합니다.', () => {
   );
   const listItems = screen.getAllByRole('listitem');
   expect(listItems.length).toEqual(menus.length);
+  listItems.forEach((node, i) => {
+    expect(node.textContent).toBe(menus[i].text);
+  });
 });
 
 test('선택 된 아이템에 클래스를 부여합니다.', () => {

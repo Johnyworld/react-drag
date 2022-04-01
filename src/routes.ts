@@ -1,6 +1,6 @@
 import React from 'react';
-import CardGridContainer from './features/cardGrid/cardGrid.container';
-import CardListContainer from './features/cardList/cardList.container';
+import GridPage from './pages/GridPage';
+import ListPage from './pages/ListPage';
 
 export interface PageMenu {
   id: string;
@@ -16,13 +16,13 @@ const routes: PageMenu[] = [
     id: 'list',
     name: 'List',
     path: ROOT + '/list',
-    component: CardListContainer,
+    component: ListPage,
   },
   {
     id: 'grid',
     name: 'Grid',
     path: ROOT + '/grid',
-    component: CardGridContainer,
+    component: GridPage,
   },
 ];
 
